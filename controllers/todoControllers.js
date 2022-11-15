@@ -94,7 +94,6 @@ const deleteTodo = asyncHandler(async (req, res)=>{
         throw new Error('Not authorized')
     }
     const deletedTodo = await todo.remove()
-    console.log(deletedTodo)
     res.status(200).json(deletedTodo)
 })
 module.exports = {
