@@ -14,6 +14,9 @@ app.use(cors({origin:['http://localhost:3000', 'https://my-task-app.onrender.com
 
 app.use('/api/users', require('./routes/userRoutes'))
 app.use('/api/todos', require('./routes/todoRoutes'))
+app.get('/', (req,res)=>{
+    res.json({message: "Welcome to my task api"})
+})
 
 
 app.use(errorHandler)
